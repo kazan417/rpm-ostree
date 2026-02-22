@@ -61,7 +61,7 @@ where
         }
         InputFormat::YAML => {
             let pf: T = yaml_serde::from_reader(input).map_err(|e| {
-                io::Error::new(io::ErrorKind::InvalidInput, format!("serde-yaml: {e}"))
+                io::Error::new(io::ErrorKind::InvalidInput, format!("yaml-serde: {e}"))
             })?;
             pf
         }
